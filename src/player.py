@@ -2,9 +2,11 @@
 # currently.
 
 class Player:
-    def __init__(self, room):
+    def __init__(self, name, room, items=[]):
         self.room = room
-        # self.items = items
+        self.name = name
+        self.items = []
+        
 
     def __str__(self):
-        return f"to Player: {self.room}"
+        return f"{self.name} is in {self.room}"

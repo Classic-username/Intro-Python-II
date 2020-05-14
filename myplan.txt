@@ -1,0 +1,25 @@
+UPER
+
+understand
+
+plan
+
+something
+
+revisit
+
+
+Done list
+- Solve this other bug
+
+
+- Make a player class
+
+- Make a room class
+
+
+- Take user input for rooms
+    - Use split() to break up input
+        - Research split
+        - Write a new script
+        - Solve this other bug

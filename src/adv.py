@@ -1,5 +1,4 @@
 from room import Room
-
 from player import Player
 
 # Declare all the rooms
@@ -43,7 +42,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 
-player = Player(room['outside'])
+player = Player("Indaina", room['outside'])
 
 
 # Write a loop that:
@@ -61,18 +60,35 @@ movement = ''
 
 
 
-while not movement == "quit":
-    print(f"You are at location {player.room.name}: {player.room.description}")
-    movement = str(input("Choose a direction "))
-    if movement == 'north':
-        player.room = player.room.n_to
-    elif movement == 'east':
-        player.room = player.room.e_to
-    elif movement == 'south':
-        player.room = player.room.s_to
-    elif movement == 'west':
-        player.room = player.room.w_to
-    elif movement == 'quit':
-        exit()
-    else:
-        print("Please enter a direction")
+# while not movement == "quit":
+#     print(f"You are at location {player.room.name}: {player.room.description}")
+#     movement = str(input("Choose a direction "))
+#     if movement == 'north':
+#         player.room = player.room.n_to
+#     elif movement == 'east':
+#         player.room = player.room.e_to
+#     elif movement == 'south':
+#         player.room = player.room.s_to
+#     elif movement == 'west':
+#         player.room = player.room.w_to
+#     elif movement == 'quit':
+#         exit()
+#     else:
+#         print("Please enter a direction")
+
+
+directions = {'n': 'n_to', 'e': 'e_to', 's': 's_to', 'w': 'w_to',}
+
+while True:
+    print(player.room.name)
+    print(player.room.description)
+
+    choice = input("Which way, Gandalf?  ")
+
+    direction = directions[choice]
+
+    try:
+        player.room = getattr(player.room, direction)
+
+    except AttributeError:
+        print("Sorry, you can't go that way.")
