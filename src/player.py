@@ -5,7 +5,7 @@ class Player:
     def __init__(self, name, room, items=[]):
         self.room = room
         self.name = name
-        self.items = []
+        self.items = items
         
 
     def __str__(self):

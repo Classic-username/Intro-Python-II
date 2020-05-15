@@ -83,7 +83,7 @@ while True:
     print(player.room.name)
     print(player.room.description)
 
-    choice = input("Which way, Gandalf?  ")
+    choice = input("Which way, Gandalf?  ").lower()
 
     direction = directions[choice]
 
