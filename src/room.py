@@ -7,10 +7,8 @@ class Room:
         self.description = description
         self.items = items
 
-        self.n_to = None
-        self.e_to = None
-        self.s_to = None
-        self.w_to = None
+    def listo(self):
+        return[item.__str__() for item in self.items]
 
     def __str__(self):
         return self.name, self.description

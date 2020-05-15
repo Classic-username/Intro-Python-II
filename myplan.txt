@@ -23,3 +23,19 @@ Done list
         - Research split
         - Write a new script
         - Solve this other bug
+
+\'n'\
+
+
+* Make rooms able to hold multiple items
+- Make a list of references for the rooms to reference an item class.
+
+
+* Make the player able to carry multiple items
+- Make a list of references for the rooms to reference an item class.
+
+
+* Add items to the game that the user can carry around
+
+
+* Add `get [ITEM_NAME]` and `drop [ITEM_NAME]` commands to the parser

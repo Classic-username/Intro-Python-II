@@ -5,7 +5,7 @@ class Person():
         self.age = age
 
     def isAdult(self):
-        if age > 17:
+        if self.age > 17:
             return True
         else:
             return False
